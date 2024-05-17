@@ -6,10 +6,10 @@ name: workflow
     workflow_dispatch: {}
 env:
     ACR_RESOURCE_GROUP: practice
-    AZURE_CONTAINER_REGISTRY: acrworkflow1715940306928
+    AZURE_CONTAINER_REGISTRY: myContainerRegistry687435
     CLUSTER_NAME: cluster
     CLUSTER_RESOURCE_GROUP: practice
-    CONTAINER_NAME: image-workflow-1715940306928
+    CONTAINER_NAME: image-workflow-1715940504120
     DEPLOYMENT_MANIFEST_PATH: |
         manifests/deployment.yaml
         manifests/service.yaml
@@ -62,4 +62,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: namespace-workflow-1715940306928
+                namespace: namespace-workflow-1715940504120
