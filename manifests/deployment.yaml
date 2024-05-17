@@ -4,7 +4,7 @@ metadata:
   name: workflow
   labels:
     app: workflow
-  namespace: namespace-workflow-1715940306928
+  namespace: namespace-workflow-1715940504120
 spec:
   replicas: 1
   selector:
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: workflow
-          image: acrworkflow1715940306928.azurecr.io/image-workflow-1715940306928:latest
+          image: mycontainerregistry687435.azurecr.io/image-workflow-1715940504120:latest
           ports:
             - containerPort: 8080
