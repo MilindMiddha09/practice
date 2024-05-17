@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: milind
+  name: workflow
   labels:
-    app: milind
-  namespace: namespace-workflow-1715940025860
+    app: workflow
+  namespace: namespace-workflow-1715940306928
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: milind
+      app: workflow
   template:
     metadata:
       labels:
-        app: milind
+        app: workflow
     spec:
       containers:
-        - name: milind
-          image: mycontainerregistry687435.azurecr.io/image-workflow-1715940025860:latest
+        - name: workflow
+          image: acrworkflow1715940306928.azurecr.io/image-workflow-1715940306928:latest
           ports:
             - containerPort: 8080
